@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Datang</title>
+  <link rel="icon" type="" href="teladan.webp">
+  <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+  <P>SMK TELADAN P. SIANTAR</P>
+  <img src="teladan.webp" alt="Logo Sekolah" class="logo">
+  <h1 class="typing">SELAMAT DATANG DI WEB SAYA</h1>
+  <p>Mempersembahkan</p>
+
+  <div class="loading-bar">
+    <div class="loading-fill"></div>
+  </div>
+
+  <a href="index.html" class="btn-masuk">Masuk ke Halaman Utama</a>
+
+  <script>
+    // Auto pindah halaman setelah 1 detik
+    setTimeout(() => {
+      document.body.style.transition = "opacity 0.8s ease";
+      document.body.style.opacity = "0";
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 800);
+    }, 5000);
+  </script>
+</body>
+</html>
