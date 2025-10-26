@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: #00eaff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Logo */
+.logo {
+  width: 120px;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: slideDown 1s ease forwards;
+}
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animasi ngetik */
+.typing {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00eaff;
+  white-space: nowrap;
+  border-right: 3px solid #00eaff;
+  overflow: hidden;
+  width: 0;
+  animation: typing 2.5s steps(25, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  to {
+    width: 515px; /* disesuaikan supaya semua huruf muat */
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Loading text */
+p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #bdefff;
+  opacity: 0;
+  animation: fadeIn 1s ease 2s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Loading bar */
+.loading-bar {
+  width: 300px;
+  height: 10px;
+  border: 2px solid #00eaff;
+  border-radius: 10px;
+  margin-top: 30px;
+  overflow: hidden;
+}
+.loading-fill {
+  height: 100%;
+  width: 0;
+  background: #00eaff;
+  animation: load 5s linear forwards; /* 1 detik aja */
+}
+@keyframes load {
+  to {
+    width: 100%;
+  }
+}
+
+/* Tombol */
+.btn-masuk {
+  margin-top: 40px;
+  padding: 10px 25px;
+  color: #000;
+  background: #00eaff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.btn-masuk:hover {
+  background: #fff;
+  color: #00eaff;
+  box-shadow: 0 0 20px #00eaff;
+}
